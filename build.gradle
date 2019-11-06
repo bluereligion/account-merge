@@ -1,0 +1,40 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.1.1.RELEASE')
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.1.1.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+}
+
+repositories {
+    jcenter()
+}
+
+group 'com.bluerelgion.accountmerge'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+ 
+    implementation 'com.google.guava:guava:28.0-jre'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.7'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.9.7'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mockito:mockito-core:2.18.3'
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.18.3'
+
+}
